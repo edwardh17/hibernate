@@ -38,7 +38,8 @@ public class SessionFactory {
     }
 
     private static void registerMappers(Configuration config) throws MappingException {
-       config.addAnnotatedClass(com.edwardh17.tablas.Autos.class);
+       config.addAnnotatedClass(com.edwardh17.tablas.Auto.class);
+       config.addAnnotatedClass(com.edwardh17.tablas.Concesionario.class);
     }
 
 }

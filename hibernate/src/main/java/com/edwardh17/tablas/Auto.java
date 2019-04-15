@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
 @Table(name="autos")
-public class Autos implements Serializable{
+public class Auto implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,9 +20,9 @@ public class Autos implements Serializable{
     @Column(name="au_modelo")
     private String modelo;
     @Column(name="au_concesionario")
-    private String concesionario;
+    private int concesionario;
     
-    public Autos(){
+    public Auto(){
     }
 
     public int getId() {
@@ -49,11 +49,11 @@ public class Autos implements Serializable{
         this.modelo = modelo;
     }
     
-    public String getConcesionario() {
+    public int getConcesionario() {
         return concesionario;
     }
 
-    public void setConcesionario(String concesionario) {
+    public void setConcesionario(int concesionario) {
         this.concesionario = concesionario;
     }
 }
