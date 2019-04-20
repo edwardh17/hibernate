@@ -1,6 +1,7 @@
 package com.edwardh17.tablas;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,8 +20,13 @@ public class Auto implements Serializable{
     private String marca;
     @Column(name="au_modelo")
     private String modelo;
+    @Column (name="au_fecha_venta")
+    private Date fechaVenta;
+    @Column (name="au_precio")
+    private float precio;
     @Column(name="au_concesionario")
     private int concesionario;
+    
     
     public Auto(){
     }
@@ -49,6 +55,7 @@ public class Auto implements Serializable{
         this.modelo = modelo;
     }
     
+    
     public int getConcesionario() {
         return concesionario;
     }
@@ -56,4 +63,22 @@ public class Auto implements Serializable{
     public void setConcesionario(int concesionario) {
         this.concesionario = concesionario;
     }
+
+    public Date getFechaVenta() {
+        return fechaVenta;
+    }
+
+    public void setFechaVenta(Date fechaVenta) {
+        this.fechaVenta = fechaVenta;
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+    
+    
 }
