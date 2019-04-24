@@ -23,7 +23,7 @@ CREATE TABLE `concesionarios` (
 SELECT * FROM autos;
 SELECT * FROM concesionarios;
 
-INSERT INTO `autos` (`au_id`,`au_marca`,`au_modelo`,`au_fecha_venta`,`au_precio`) VALUES 
+/*INSERT INTO `autos` (`au_id`,`au_marca`,`au_modelo`,`au_fecha_venta`,`au_precio`) VALUES 
  (1,'chevrolet','2000','2005-05-05',18000),
  (2,'chevrolet','1999','2005-01-01',15000),
  (3,'fiat','2000','2005-01-06',14000),
@@ -31,4 +31,4 @@ INSERT INTO `autos` (`au_id`,`au_marca`,`au_modelo`,`au_fecha_venta`,`au_precio`
  (5,'peugeot','1997','2003-05-06',9500),
  (6,'chevrolet','1998','2006-01-01',8900),
  (7,'ford','2002','2002-05-06',13500),
- (8,'ford','2003','2002-09-09',16000);
+ (8,'ford','2003','2002-09-09',16000);*/
