@@ -15,10 +15,10 @@ public class Main {
 
     public static void main(String[] args) throws ParseException {
         Session sesion = SessionFactory.getSession();
-        insertarConcesionario("Automóviles San Jorge", "Av Corrientes 1740", sesion);
+        /*insertarConcesionario("Automóviles San Jorge", "Av Corrientes 1740", sesion);
         insertarConcesionario("Auto Zero", "Lavalle 1101", sesion);
         insertarConcesionario("Giorgi Automotores", "Juan Domingo Perón 795", sesion);
-        insertarConcesionario("Pro Motors", "Juana Manso 163,", sesion);
+        insertarConcesionario("Pro Motors", "Juana Manso 163,", sesion);*/
 
         /*String sdate = "2005-01-01";
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");

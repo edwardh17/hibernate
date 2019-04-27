@@ -7,28 +7,40 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
 @Entity
-@Table(name="autos")
-public class Auto implements Serializable{
-    
+@Table(name = "autos")
+@NamedQueries({
+    @NamedQuery(
+            name = "obtenerAutosCaros",
+            query = "FROM Auto a WHERE a.precio > 10000"
+    ),
+    @NamedQuery(
+            name = "obtenerAutosBaratos",
+            query = "FROM Auto a WHERE a.precio <= :pre"
+    )
+})
+public class Auto implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="au_id")
+    @Column(name = "au_id")
     private int id;
-    @Column(name="au_marca")
+    @Column(name = "au_marca")
     private String marca;
-    @Column(name="au_modelo")
+    @Column(name = "au_modelo")
     private String modelo;
-    @Column (name="au_fecha_venta")
+    @Column(name = "au_fecha_venta")
     private Date fechaVenta;
-    @Column (name="au_precio")
+    @Column(name = "au_precio")
     private float precio;
-    @Column(name="au_concesionario")
+    @Column(name = "au_concesionario")
     private int concesionario;
-    
-    
-    public Auto(){
+
+    public Auto() {
     }
 
     public int getId() {
@@ -54,8 +66,7 @@ public class Auto implements Serializable{
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
-    
-    
+
     public int getConcesionario() {
         return concesionario;
     }
@@ -79,6 +90,5 @@ public class Auto implements Serializable{
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-    
-    
+
 }

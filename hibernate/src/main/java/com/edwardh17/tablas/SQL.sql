@@ -20,8 +20,18 @@ CREATE TABLE `concesionarios` (
   PRIMARY KEY  (`co_id`)
 ) ENGINE=MyISAM;
 
+CREATE TABLE  `hibernate`.`transporte` (
+  `tr_id` int(10) unsigned NOT NULL auto_increment,
+  `tr_ancho` int(10) NOT NULL default 0,
+  `tr_largo` int(10) NOT NULL default 0,
+  `tr_au_patente` varchar(20) NOT NULL default '',
+  `tr_discriminador` varchar(10) NOT NULL default 't',
+    PRIMARY KEY  (`tr_id`)
+) ENGINE=MyISAM;
+
 SELECT * FROM autos;
 SELECT * FROM concesionarios;
+
 
 /*INSERT INTO `autos` (`au_id`,`au_marca`,`au_modelo`,`au_fecha_venta`,`au_precio`) VALUES 
  (1,'chevrolet','2000','2005-05-05',18000),

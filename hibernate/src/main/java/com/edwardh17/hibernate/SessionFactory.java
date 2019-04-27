@@ -32,7 +32,8 @@ public class SessionFactory {
         props.put("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
         props.put("hibernate.connection.url", "jdbc:mysql://localhost/hibernate?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
         props.put("hibernate.connection.username", "root");
-        props.put("hibernate.connection.password", "XalvgU11sE6QhoDJ");
+        props.put("hibernate.connection.password", "");
+        //props.put("hibernate.connection.password", "XalvgU11sE6QhoDJ");
         props.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
         props.put("hibernate.show_sql","true");
         return props;
@@ -41,6 +42,7 @@ public class SessionFactory {
     private static void registerMappers(Configuration config) throws MappingException {
        config.addAnnotatedClass(com.edwardh17.tablas.Auto.class);
        config.addAnnotatedClass(com.edwardh17.tablas.Concesionario.class);
+       config.addAnnotatedClass(com.edwardh17.tablas.Transporte.class);
     }
 
 }
