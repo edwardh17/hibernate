@@ -43,6 +43,11 @@ public class SessionFactory {
        config.addAnnotatedClass(com.edwardh17.tablas.Auto.class);
        config.addAnnotatedClass(com.edwardh17.tablas.Concesionario.class);
        config.addAnnotatedClass(com.edwardh17.tablas.Transporte.class);
+       config.addAnnotatedClass(com.edwardh17.laboratorio4.Cliente.class);
+       config.addAnnotatedClass(com.edwardh17.laboratorio4.Persona.class);
+       config.addAnnotatedClass(com.edwardh17.laboratorio4.Vendedor.class);
+       config.addAnnotatedClass(com.edwardh17.asociaciones.Factura.class);
+       config.addAnnotatedClass(com.edwardh17.asociaciones.Item.class);
     }
 
 }

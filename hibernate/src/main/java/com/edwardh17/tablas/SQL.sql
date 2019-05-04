@@ -42,3 +42,17 @@ SELECT * FROM concesionarios;
  (6,'chevrolet','1998','2006-01-01',8900),
  (7,'ford','2002','2002-05-06',13500),
  (8,'ford','2003','2002-09-09',16000);*/
+
+
+CREATE TABLE `items` (
+  `it_id` int(10) unsigned NOT NULL auto_increment,
+  `it_descripcion` varchar(255) NOT NULL default '',
+  `fac_id` int(10) unsigned default '0',
+  `it_cantidad` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`it_id`)
+) ENGINE=MyISAM;
+
+CREATE TABLE `facturas` (
+  `fac_id` int(10) unsigned NOT NULL auto_increment,
+  PRIMARY KEY  (`fac_id`)
+) ENGINE=MyISAM;
